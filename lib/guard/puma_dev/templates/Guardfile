@@ -1,4 +1,4 @@
-guard 'pow' do
+guard 'puma-dev' do
   watch('.rvmrc')
   watch('.ruby-version')
   watch('Gemfile')

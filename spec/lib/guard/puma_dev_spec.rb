@@ -13,7 +13,7 @@ describe Guard::PumaDev do
   end
 
   describe "start" do
-    it "doesn't restart pow by default" do
+    it "doesn't restart puma dev by default" do
       expect(plugin.manager).to_not receive(:restart)
       plugin.start
     end
@@ -21,7 +21,7 @@ describe Guard::PumaDev do
     context "with restart_on_start option" do
       let(:options) { { restart_on_start: true } }
 
-      it "restarts pow" do
+      it "restarts puma-dev" do
         expect(plugin.manager).to receive(:restart)
         plugin.start
       end

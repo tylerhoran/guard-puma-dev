@@ -10,7 +10,7 @@ describe Guard::PumaDev::Manager do
     Guard::Compat::UI.stub(:notify)
   }
 
-  describe "#restart_pow" do
+  describe "#restart_puma_dev" do
 
     context "without tmp dir" do
       before { FileUtils.rm_rf('tmp') }
